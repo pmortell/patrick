@@ -1,0 +1,90 @@
+
+
+.grow {
+    grid-area: grow;
+}
+
+.fade {
+    grid-area: fade;
+}
+
+.bounce {
+    grid-area: bounce;
+}
+
+.rotate {
+    grid-area: rotate;
+}
+
+.grid-container {
+    display: grid; 
+    grid-template-columns: 565px 300px 300px 275px;
+    grid-template-areas:
+    " grow fade bounce rotate";
+    
+	}      
+        
+}
+
+.block {
+  color: white;
+  text-align: center;
+}
+.fade {
+  opacity: 0.5;
+}
+
+img {
+    height: 350px;
+    
+}
+
+
+.grow:hover {
+  transform: scale(1.3);
+  background-color: black;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 10px 10px gray;
+  
+}
+
+.fade:hover {
+  opacity: 1;
+  box-shadow: 10px 10px gray;
+  transform: translateX(-3px);
+}
+
+
+
+.rotate {
+  background-color: purple;
+  color: purple;
+}
+
+
+
+
+.kitty {
+  animation: bounce 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    }
+
+
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, 200px, 0); }
+}
+
+.rotate:hover {
+  transform: rotateZ(90deg);
+   background: purple;
+  color: white;
+      transition: font-size 5s, background 3s;
+    text-align: center;
+    transition: transform 1s ease-out;
+    color: white;
+    
+    }
+
